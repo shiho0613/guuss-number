@@ -3,10 +3,15 @@
 # 猜對的話 印出“猜對了！”
 # 猜錯的話 要印出“比答案大或小”
 # 追加功能1：印出猜了幾次
+# 追加功能2：讓使用者自訂隨機數值範圍
 
 import random
+start = input('請輸入隨機數字範圍開始值：')# 追加功能2
+end = input('請輸入隨機數字範圍結束值：')# 追加功能2
+start = int(start)# 追加功能2
+end = int(end)# 追加功能2
 
-r = random.randint(1,100)
+r = random.randint(start, end)# 追加功能2,將數字改成start和end
 count = 0 # 追加功能1
 while True:
 	count += 1 # count = count + 1 # 追加功能1
